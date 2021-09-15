@@ -18,7 +18,7 @@ Before starting, make sure you have at least those components on your workstatio
 Start by cloning this project on your workstation.
 
 ``` sh
-git clone https://github.com/Odilomar/serverless
+git clone https://github.com/tthiagopereira/serverless-challenge
 ```
 
 The next thing will be to install all the dependencies of the project.
@@ -48,15 +48,15 @@ You can now head to `http://localhost:3000/` and see your API Swagger docs.
 ## 2. Endpoints
 
 - POST /user/ : Endpoint to create a user:
-  - Body: { nome: string, idade: number, cargo: string };
-  - Response: { id: number, nome: string, idade: number, cargo: string, created_at: Date, update_at: Date };
+  - Body: { nome: string, birth_date: number, office: string };
+  - Response: { id: number, nome: string, birth_date: number, office: string, created_at: Date, update_at: Date };
 
 - GET /user/ : Endpoint to retrieve all users:
   - Query: 
     - id: number;
     - name: string;
-    - idade: number;
-    - cargo: string;
+    - birth_date: number;
+    - office: string;
     - take: number;
     - skip: number;
   - Response: { data: [User], total: number, take: number, skip: number };
@@ -64,13 +64,13 @@ You can now head to `http://localhost:3000/` and see your API Swagger docs.
 - GET /user/:id : Endpoint to retrieve specific user by id
   - Param:
     - id: number;
-  - Response: { id: number, nome: string, idade: number, cargo: string, created_at: Date, update_at: Date };
+  - Response: { id: number, nome: string, birth_date: number, office: string, created_at: Date, update_at: Date };
 
 - PUT /user/:id : Endpoint to update user
   - Param:
     - id: number;
-  - Body: { nome?: string, idade?: number, cargo?: string };
-  - Response: { id: number, nome: string, idade: number, cargo: string, created_at: Date, update_at: Date };
+  - Body: { nome?: string, birth_date?: date, office?: string };
+  - Response: { id: number, nome: string, birth_date: date, office: string, created_at: Date, update_at: Date };
 
 - DELETE /user/:id : Endpoint to delete user
   - Param:
