@@ -1,0 +1,11 @@
+{
+    "version": "4.3.5",
+    "extends": "./tsconfig.json",
+    "exclude": [
+        "node_modules",
+        "dist"
+    ],
+    "include": [
+        "src/**/*.ts"
+    ]
+}
